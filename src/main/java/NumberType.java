@@ -52,6 +52,7 @@ public class NumberType {
     }
 
     private boolean checkPalindromic(int a) {
+        if (a == Integer.MIN_VALUE) return false;
         a = Math.abs(a);
         ArrayList<Integer> digits = new ArrayList<>();
         do {
@@ -64,5 +65,10 @@ public class NumberType {
             }
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        NumberType nu = new NumberType();
+        System.out.println(nu.printTypes(1381));
     }
 }
